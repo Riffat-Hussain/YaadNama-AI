@@ -31,43 +31,49 @@
 
 
 
+<div align="center">
+
 ## 🌐 Live Demo
 
-<p align="center">
-  <a href="https://yaad-nama-ai.vercel.app">
-    <img src="https://img.shields.io/badge/🚀%20Launch%20YaadNama%20AI-Live-success?style=for-the-badge" alt="Launch YaadNama AI">
-  </a>
-</p>
+### 🚀 **Experience YaadNama AI**
 
-🚀 **Explore the live application:**  
-### https://yaad-nama-ai.vercel.app
+<a href="https://yaad-nama-ai.vercel.app">
+  <img src="https://img.shields.io/badge/Open_Live_App-00C853?style=for-the-badge&logo=vercel&logoColor=white" alt="Live Demo">
+</a>
 
-> Deployed on **Vercel** and publicly accessible for evaluation.
----
+<p><i>Hosted on Vercel and publicly accessible for evaluation.</i></p>
 
-## 📚 Table of Contents
-
-| | |
-|---|---|
-| 🧠 | About YaadNama |
-| 🎯 | Problem Statement |
-| 💡 | Solution |
-| ✨ | Features |
-| 🤖 | AI Memory Companion |
-| 📸 | Screenshots |
-| 🛠 | Tech Stack |
-| 🔐 | Authentication |
-| 🗄 | Data Storage |
-| 🚀 | Getting Started |
-| ☁️ | Deployment |
-| 📂 | Project Structure |
-| ✅ | Validation Checklist |
-| 🩺 | Troubleshooting |
-| 🌱 | Future Roadmap |
-| 📄 | License |
+</div>
 
 ---
 
+<div align="center">
+
+# 📚 Table of Contents
+
+| |
+|:---:|
+| 🏠 [Overview](#-yaadnama-ai-یادنامہ--your-intelligent-memory-companion) |
+| 🌐 [Live Demo](#-live-demo) |
+| 🎯 [The Problem](#-the-problem) |
+| 💡 [The Solution](#-the-solution) |
+| 📸 [Screenshots](#-screenshots) |
+| ✨ [Feature Showcase](#-feature-showcase) |
+| 🤖 [The AI Feature](#-the-ai-feature) |
+| 🛠️ [Tech Stack](#️-tech-stack) |
+| 🔐 [Authentication Architecture](#-authentication-architecture) |
+| 💾 [Data Storage & Scoping](#-data-storage--scoping) |
+| 🚀 [Getting Started](#-getting-started) |
+| ☁️ [Deploying to Vercel](#️-deploying-to-vercel) |
+| 📁 [Project Structure](#-project-structure) |
+| ✅ [Validation Checklist](#-validation-checklist) |
+| 🛠️ [Troubleshooting](#️-troubleshooting) |
+| 🔮 [Future Roadmap](#-future-roadmap) |
+| 📄 [License](#-license) |
+
+</div>
+
+---
 ## 🎯 The Problem
 
 People experiencing memory decline — through early Alzheimer's, mild cognitive decline, or brain-injury recovery — don't just forget facts. They lose confidence in their own independence.
@@ -99,37 +105,73 @@ The app answers **only from what you actually saved** — never guessing, never 
   3. Replace the paths below with the actual filenames.
 -->
 
-<table>
-  <tr>
-    <td align="center" width="33%">
-      <img src="./screenshots/login.png" width="260" alt="Landing page"/><br/>
-      <sub><b>Landing / Sign In</b></sub>
-    </td>
-    <td align="center" width="33%">
-      <img src="./screenshots/dashboard.png" width="260" alt="Dashboard"/><br/>
-      <sub><b>Dashboard</b></sub>
-    </td>
-    <td align="center" width="33%">
-      <img src="./screenshots/memory vault.png" width="260" alt="Memory Vault"/><br/>
-      <sub><b>Memory Vault</b></sub>
-    </td>
-  </tr>
-  <tr>
-    <td align="center">
-      <img src="./screenshots/companion.png" width="260" alt="AI Companion chat"/><br/>
-      <sub><b>AI Companion Chat</b></sub>
-    </td>
-    <td align="center">
-      <img src="./screenshots/mood.png" width="260" alt="Mood tracker"/><br/>
-      <sub><b>Mood Tracker</b></sub>
-    </td>
-    <td align="center">
-      <img src="./screenshots/sos.png" width="260" alt="Emergency SOS"/><br/>
-      <sub><b>Emergency SOS</b></sub>
-    </td>
+<div align="center">
 
-  </tr>
+# 📸 Application Showcase
+
+### *A visual walkthrough of YaadNama AI*
+
+Explore the key screens of the application, from authentication to AI-powered memory assistance.
+
+<br>
+
+<table>
+<tr>
+<td align="center" width="33%">
+
+<img src="./screenshots/login.png" width="280" alt="Landing / Sign In"/>
+
+**🏠 Landing / Sign In**
+
+</td>
+
+<td align="center" width="33%">
+
+<img src="./screenshots/dashboard.png" width="280" alt="Dashboard"/>
+
+**📊 Dashboard**
+
+</td>
+
+<td align="center" width="33%">
+
+<img src="./screenshots/memory vault.png" width="280" alt="Memory Vault"/>
+
+**🗂️ Memory Vault**
+
+</td>
+</tr>
+
+<tr>
+<td align="center">
+
+<img src="./screenshots/companion.png" width="280" alt="AI Memory Companion"/>
+
+**🤖 AI Memory Companion**
+
+</td>
+
+<td align="center">
+
+<img src="./screenshots/mood.png" width="280" alt="Mood Tracker"/>
+
+**😊 Mood Tracker**
+
+</td>
+
+<td align="center">
+
+<img src="./screenshots/sos.png" width="280" alt="Emergency SOS"/>
+
+**🆘 Emergency SOS**
+
+</td>
+</tr>
 </table>
+
+<i>✨ Every screen was designed and implemented specifically for YaadNama AI as part of this original end-to-end final project.</i>
+
+</div>
 
 ---
 
@@ -489,17 +531,47 @@ This is an MVP built to demonstrate a real, working, end-to-end solution. Planne
 
 ---
 
-## 📄 License
+---
 
-<!-- TODO: choose and add a license, e.g. MIT -->
-This project is submitted as an individual academic final project.
+<div align="center">
+
+# 📜 License
+
+This project is submitted as an **individual academic final project**.
+
+*No open-source license has been applied at this time.*
+
+</div>
 
 ---
 
-## 🙏 About This Project
+<div align="center">
 
-YaadNama AI was designed and built end-to-end as an original solution to a real problem faced by people living with memory challenges and the families who support them. It is not a template, tutorial clone, or derivative of an existing project.
+# 💙 About YaadNama AI
 
-**Questions or feedback?** Open an issue on the GitHub repository above.
+*"Helping people remember what matters most."*
 
-*Built with care.*
+</div>
+
+**YaadNama AI** was conceived, designed, developed, and deployed entirely by the author as an original end-to-end AI application. Inspired by the real challenges faced by individuals experiencing memory loss and the families who support them, the project combines compassionate design with modern AI to create a secure, intelligent memory companion.
+
+Every aspect of the application—from the user experience and authentication flow to the AI-powered Memory Companion and deployment—was built specifically for this project.
+
+> **Original Work Notice**
+>
+> ✅ Independently designed and developed  
+> ✅ Solves a real-world problem  
+> ✅ Built from scratch as an end-to-end AI application  
+> ❌ Not a template  
+> ❌ Not a tutorial clone  
+> ❌ Not derived from an existing project
+
+<div align="center">
+
+### 🌟 Thank you for taking the time to explore YaadNama AI.
+
+If you have any questions, suggestions, or feedback, feel free to **open an issue** on this GitHub repository.
+
+**Built with ❤️, empathy, and AI.**
+
+</div>
