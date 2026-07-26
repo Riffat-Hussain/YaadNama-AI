@@ -75,7 +75,7 @@ The app answers **only from what you actually saved** — never guessing, never 
 <table>
   <tr>
     <td align="center" width="33%">
-      <img src="./screenshots/landing.png" width="260" alt="Landing page"/><br/>
+      <img src="./screenshots/login.png" width="260" alt="Landing page"/><br/>
       <sub><b>Landing / Sign In</b></sub>
     </td>
     <td align="center" width="33%">
@@ -83,7 +83,7 @@ The app answers **only from what you actually saved** — never guessing, never 
       <sub><b>Dashboard</b></sub>
     </td>
     <td align="center" width="33%">
-      <img src="./screenshots/memories.png" width="260" alt="Memory Vault"/><br/>
+      <img src="./screenshots/memory vault.png" width="260" alt="Memory Vault"/><br/>
       <sub><b>Memory Vault</b></sub>
     </td>
   </tr>
@@ -97,9 +97,10 @@ The app answers **only from what you actually saved** — never guessing, never 
       <sub><b>Mood Tracker</b></sub>
     </td>
     <td align="center">
-      <img src="./screenshots/emergency.png" width="260" alt="Emergency SOS"/><br/>
+      <img src="./screenshots/sos.png" width="260" alt="Emergency SOS"/><br/>
       <sub><b>Emergency SOS</b></sub>
     </td>
+
   </tr>
 </table>
 
