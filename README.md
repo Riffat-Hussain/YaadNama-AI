@@ -1,10 +1,59 @@
-# YaadNama AI (یادنامہ) — Your Intelligent Memory Companion
+<div align="center">
 
-> **YaadNama** means *"memory journal"* in Urdu. It's a private, gentle place for people with memory challenges to save the people, places, medications, and moments that matter — and ask for them back, in plain language, whenever they need to.
+# 🧠 YaadNama AI (یادنامہ)
 
-**An original, individually-built final project.** Not a template, not a tutorial clone.
+### *Your Intelligent Memory Companion*
+
+> **"Helping people remember what matters most."**
+
+🌐 **Live Demo:** https://yaad-nama-ai.vercel.app
+
+</div>
 
 ---
+
+> **YaadNama** *(Urdu: یادنامہ)* translates to **"Memory Journal."**  
+> It is a private, AI-powered companion designed for people experiencing memory challenges, providing a gentle space to preserve the people, places, medications, and life moments that matter—and retrieve them naturally whenever needed.
+
+> 🎓 **This project is an original, independently designed and developed final project.**  
+> It is **not** based on a template, tutorial, or cloned application.
+
+---
+
+
+
+<div align="center">
+
+# 🧠 YaadNama AI
+
+### یادنامہ
+
+#### *Your Intelligent Memory Companion*
+
+<img src="https://img.shields.io/badge/Next.js-14-black?style=for-the-badge&logo=next.js">
+<img src="https://img.shields.io/badge/Groq-Llama_3.3_70B-blue?style=for-the-badge">
+<img src="https://img.shields.io/badge/Vercel-Deployed-black?style=for-the-badge&logo=vercel">
+
+<br><br>
+
+**Helping people remember what matters most.**
+
+</div>
+
+---
+
+> **YaadNama** *(یادنامہ)* — **"Memory Journal"** in Urdu — is a secure AI-powered memory companion created for individuals experiencing memory challenges. Users can safely store important people, places, medications, events, and personal notes, then retrieve them later through simple, natural conversations.
+
+> 🎓 **Original Individual Project**
+>
+> Designed, developed, and deployed independently as a complete end-to-end AI application.  
+> **Not** a template. **Not** a tutorial clone.
+
+---
+
+
+
+
 
 ## 🌐 Live Demo
 
