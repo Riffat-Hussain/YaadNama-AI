@@ -185,39 +185,43 @@ The app answers **only from what you actually saved** — never guessing, never 
 - Private by design: only the user's question is sent to the AI, never the full database.
 ---
 
-## 🤖 The AI Feature
+# 🤖 AI Memory Companion
 
-The **AI Memory Companion** is the core intelligent feature of the app. When a user asks a question, the app sends their saved Memory Vault plus their question to a Groq-hosted Llama model, governed by a strict, self-authored system prompt that forces the model to answer only from what the user has recorded — never to invent people, dates, or facts.
+> *The intelligence behind **YaadNama AI** is carefully designed to be trustworthy, privacy-conscious, and grounded entirely in the user's own memories.*
 
-**Model used:** `llama-3.3-70b-versatile` via Groq's OpenAI-compatible API 
-**Called from:** a server-side Next.js API route (`/api/ai`), so the API key is never exposed to the browser.
+---
 
-```
+## 🧠 Core AI Capability
 
-#### How a Question Gets Answered
+The **AI Memory Companion** is the core intelligent feature of the application. When a user asks a question, the app sends the user's saved **Memory Vault** together with their question to a **Groq-hosted Llama model**, governed by a **strict, self-authored system prompt** that forces the model to answer **only from what the user has recorded**—never to invent people, dates, or facts.
+
+### ⚙️ AI Configuration
+
+| Component | Details |
+|-----------|---------|
+| **Model** | `llama-3.3-70b-versatile` |
+| **Provider** | Groq |
+| **API** | OpenAI-Compatible API |
+| **Server Route** | `/api/ai` (Next.js API Route) |
+| **Security** | API key remains server-side and is never exposed to the browser |
+
+---
+
+## 🔄 AI Request Flow
 
 ```mermaid
 sequenceDiagram
     participant U as User
-    participant App as YaadNama (client)
-    participant API as /api/ai (server route)
+    participant App as YaadNama (Client)
+    participant API as /api/ai (Server)
     participant Groq as Groq LLM
 
     U->>App: "Who is Ahmed?"
-    App->>API: question + saved Memory Vault
-    API->>Groq: system prompt + vault + question
-    Groq-->>API: answer grounded only in the vault
-    API-->>App: response
-    App-->>U: gentle, concise reply
-```
-
-The API key lives only on the server side of this exchange — it's never sent to, or visible in, the browser.
-
-#### Secondary AI Behavior — Auto-Summaries
-
-Every memory saved to the vault is automatically passed to the same model with an instruction to generate a **warm, one-line summary (under 18 words)** based strictly on what the user wrote — never invented, never embellished, never adding facts that weren't in the original entry.
-
-**Why this matters:** for someone whose memory is already unreliable, an AI that "helpfully" fills in gaps or guesses is actively harmful. Both AI behaviors in this app are constrained, on purpose, to be *retrieval and summarization tools*, not creative or speculative ones.
+    App->>API: Question + Memory Vault
+    API->>Groq: System Prompt + Vault + Question
+    Groq-->>API: Answer grounded only in the vault
+    API-->>App: Response
+    App-->>U: Gentle, concise reply
 
 ---
 
