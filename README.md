@@ -98,10 +98,10 @@ The app answers **only from what you actually saved** — never guessing, never 
     </td>
     <td align="center">
       <img src="./screenshots/sos.png" width="260" alt="Emergency SOS"/><br/>
-      <sub><b>Emergency SOS</b></sub>
+      <sub><b>settings</b></sub>
     <td align="center">
       <img src="./screenshots/settings.png" width="260" alt="Emergency SOS"/><br/>
-      <sub><b>Emergency SOS</b></sub>
+      <sub><b>settings</b></sub>
 
     </td>
   </tr>
