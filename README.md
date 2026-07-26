@@ -6,10 +6,20 @@
 
 ---
 
-## 🔗 Live Demo
+## 🌐 Live Demo
 
-**[👉 Try YaadNama AI live here](https://your-app-name.vercel.app)** 
+<p align="center">
+  <a href="https://yaad-nama-ai.vercel.app">
+    <img src="https://img.shields.io/badge/🚀%20Launch%20YaadNama%20AI-Live-success?style=for-the-badge" alt="Launch YaadNama AI">
+  </a>
+</p>
 
+## 🌐 Live Demo
+
+🚀 **Explore the live application:**  
+### https://yaad-nama-ai.vercel.app
+
+> Deployed on **Vercel** and publicly accessible for evaluation.
 <!--
   TODO (required before submission):
   Replace the link above with your actual deployed Vercel/hosting URL.
@@ -103,8 +113,6 @@ The app answers **only from what you actually saved** — never guessing, never 
 
   </tr>
 </table>
-
-*(All six images are the same fixed width so the grid stays aligned — swap in your own screenshots at the paths above.)*
 
 ---
 
@@ -441,7 +449,5 @@ This project is submitted as an individual academic final project.
 YaadNama AI was designed and built end-to-end as an original solution to a real problem faced by people living with memory challenges and the families who support them. It is not a template, tutorial clone, or derivative of an existing project.
 
 **Questions or feedback?** Open an issue on the GitHub repository above.
-
-*Built with care.*
 
 *Built with care.*
