@@ -1,722 +1,394 @@
-<div align="center">
+# YaadNama AI (یادنامہ) — Your Intelligent Memory Companion
 
-# 🧠 YaadNama AI
+> **YaadNama** means *"memory journal"* in Urdu. It's a private, gentle place for people with memory challenges to save the people, places, medications, and moments that matter — and ask for them back, in plain language, whenever they need to.
 
-### *Your Intelligent Memory Companion*
-
-<img src="screenshots/logo.png" width="160" alt="YaadNama Logo"/>
-
-**A compassionate AI-powered memory assistant designed for people living with memory challenges.**
+**An original, individually-built final project.** Not a template, not a tutorial clone.
 
 ---
 
-![Next.js](https://img.shields.io/badge/Next.js-14-black?style=for-the-badge&logo=next.js)
-![React](https://img.shields.io/badge/React-18-61DAFB?style=for-the-badge&logo=react)
-![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-3-38BDF8?style=for-the-badge&logo=tailwindcss)
-![Supabase](https://img.shields.io/badge/Supabase-Authentication-3ECF8E?style=for-the-badge&logo=supabase)
-![Groq](https://img.shields.io/badge/Groq-Llama_3.3_70B-purple?style=for-the-badge)
-![Vercel](https://img.shields.io/badge/Vercel-Deployment-black?style=for-the-badge&logo=vercel)
-![GitHub](https://img.shields.io/badge/GitHub-Version_Control-181717?style=for-the-badge&logo=github)
+## 🔗 Live Demo
 
-<br>
+**[👉 Try YaadNama AI live here](https://your-app-name.vercel.app)** 
 
-![Made With Love](https://img.shields.io/badge/Made%20with-❤️-red?style=flat-square)
-![AI Powered](https://img.shields.io/badge/AI-Powered-blue?style=flat-square)
-![Privacy First](https://img.shields.io/badge/Privacy-First-success?style=flat-square)
-![Accessibility](https://img.shields.io/badge/Accessibility-Friendly-orange?style=flat-square)
+<!--
+  TODO (required before submission):
+  Replace the link above with your actual deployed Vercel/hosting URL.
+  Test it yourself in an incognito window first — graders will open and use it directly.
+-->
 
-</div>
+**GitHub Repository:** `https://github.com/<your-username>/yaadnama` 
+<!-- TODO: replace with your actual public repo URL -->
 
 ---
 
-# 📖 About YaadNama
+## 📖 Table of Contents
 
-> **"YaadNama" (یادنامہ) means "Memory Journal."**
-
-YaadNama AI is a private, intelligent memory companion designed for individuals experiencing memory challenges, including:
-
-- 🧠 Early Alzheimer's Disease
-- 💙 Mild Cognitive Impairment (MCI)
-- 🩺 Brain Injury Recovery
-- 📅 Everyday Memory Overload
-
-Instead of forcing users to remember **where** they saved information, YaadNama allows them to simply **ask naturally**.
-
-Examples:
-
-> 👤 "Who is Ahmed?"
-
-> 💊 "When should I take my medicine?"
-
-> 🏠 "Where did I leave my glasses?"
-
-The AI answers **only from the memories the user has personally saved**—never guessing or inventing information.
+- [The Problem](#-the-problem)
+- [The Solution](#-the-solution)
+- [Screenshots](#-screenshots)
+- [Features](#-features)
+- [The AI Feature](#-the-ai-feature)
+- [Tech Stack](#-tech-stack)
+- [Authentication Architecture](#-authentication-architecture)
+- [Data Storage & Scoping](#-data-storage--scoping)
+- [Getting Started](#-getting-started)
+- [Deploying to Vercel](#-deploying-to-vercel)
+- [Project Structure](#-project-structure)
+- [Validation Checklist](#-validation-checklist)
+- [Troubleshooting](#-troubleshooting)
+- [Future Roadmap](#-future-roadmap)
+- [License](#-license)
 
 ---
 
-# 🎯 Problem & Solution
+## 🎯 The Problem
 
-## ❌ The Problem
+People experiencing memory decline — through early Alzheimer's, mild cognitive decline, or brain-injury recovery — don't just forget facts. They lose confidence in their own independence.
 
-People experiencing memory decline don't just forget facts—they gradually lose confidence in their independence.
+Sticky notes get lost. Whiteboards get erased. Family members end up re-explaining the same things every single day. And the note-taking apps built to help actually make things worse: they assume you remember *where you filed something* and *how to search for it* — which is exactly the skill that's failing.
 
-Traditional note-taking applications assume users remember:
+**Built for:** individuals with mild memory impairment, early-stage dementia, or brain-injury-related memory loss — and the family members who support them.
 
-- where information was saved,
-- what it was called,
-- how to search for it.
+## 💡 The Solution
 
-Unfortunately, those are often the exact abilities affected by memory decline.
+YaadNama lets people **talk to their own memories** instead of searching for them.
 
-Common alternatives like:
+You save something once, in your own words, in a calm interface built for low-vision and low-cognitive-load use. Later, you simply ask:
 
-- Sticky Notes
-- Whiteboards
-- Paper Diaries
-- Standard Note Apps
+- *"Who is Ahmed?"*
+- *"Where did I leave my glasses?"*
+- *"What medication do I take in the mornings?"*
 
-can become frustrating because they require remembering where information was stored.
+The app answers **only from what you actually saved** — never guessing, never inventing.
 
 ---
 
-## ✅ The Solution
+## 📸 Screenshots
 
-**YaadNama AI changes the experience completely.**
+<!--
+  TODO (required before submission — minimum 3 screenshots):
+  1. Create a /screenshots folder in your repo root.
+  2. Add real screenshots of your running app (landing page, dashboard, memory vault, AI companion chat, mood tracker, etc.).
+  3. Replace the paths below with the actual filenames.
+-->
 
-Instead of searching through notes...
+| Landing / Sign In | Dashboard | Memory Vault |
+|---|---|---|
+| ![Landing page](./screenshots/landing.png) | ![Dashboard](./screenshots/dashboard.png) | ![Memory Vault](./screenshots/memories.png) |
 
-Users simply ask naturally.
-
-The AI searches their personal Memory Vault and responds using **only** their saved information.
-
-If something hasn't been recorded yet, YaadNama honestly says so and gently encourages the user to save it.
-
-This creates a compassionate, trustworthy assistant that supports independence while respecting user privacy.
-
----
-
-# ❤️ Built For
-
-- 👴 Early-stage Dementia
-- 🧠 Mild Memory Impairment
-- 🩺 Brain Injury Recovery
-- 👨‍👩‍👧 Family Members & Caregivers
-- 📚 Anyone who struggles with remembering important information
+| AI Companion Chat | Mood Tracker | Emergency SOS |
+|---|---|---|
+| ![AI Companion](./screenshots/companion.png) | ![Mood Tracker](./screenshots/mood.png) | ![Emergency SOS](./screenshots/emergency.png) |
 
 ---
 
-# ✨ Key Highlights
+## ✨ Features
 
-| Feature | Description |
-|----------|-------------|
-| 🧠 AI Memory Companion | Chat naturally with your memories |
-| 📂 Memory Vault | Store important life information |
-| 😊 Mood Tracker | Monitor emotional wellbeing |
-| 🚨 Emergency SOS | Quick access to emergency contacts |
-| 🔒 Privacy First | AI never guesses or invents memories |
-| 🌐 Demo Mode | Full testing without Supabase |
-| 👤 Guest Mode | Mood tracking without an account |
-| 📱 Accessible Design | Built for low cognitive load and low vision |
+### Authentication System
+- **Create Account** — secure email/password registration with validation
+- **Sign In** — authenticated access to a personal memory vault
+- **Continue as Guest** — try mood tracking with no account needed
+- **Demo Mode** — test the full app locally without any Supabase credentials
 
----
-# ✨ Core Features
+### Memory Vault
+- Save memories under **9 categories**: Family, Friends, Important Events, Places, Medications, Personal Notes, Important Dates, Favorite Things, Lost Items
+- Each memory stores a title, description, date, and optional tags
+- Automatic AI-generated one-line summary for every memory
+- Full-text search and category filtering
+- Easy edit and delete functionality
 
-<table>
-<tr>
-<td width="50%">
+### AI Memory Companion
+- Chat interface for natural-language questions about saved memories
+- Answers **strictly** from the user's personal vault — never guesses or invents
+- Gives an honest response when information hasn't been recorded, and invites the user to save it
+- Full chat history persists across sessions
 
-### 🔐 Authentication System
+### Mood Tracker
+- **Authenticated mood tracking** — log moods (Happy, Calm, Sad, Confused, Anxious, Tired) with optional notes
+- **Guest mood tracking** — anonymous check-ins, no login required
+- 7-day trend visualization of mood patterns
+- Timestamped entries, completely independent from authenticated user data
 
-Secure and flexible authentication for every type of user.
+### Dashboard
+- Warm, welcoming greeting
+- Quick stats: memory vault count, today's mood, recent entries
+- Quick navigation to every main feature
+- At-a-glance overview of saved memories
 
-✅ Create Account
+### Emergency SOS
+- Store emergency contacts with one-tap calling
+- Large, easy-to-access crisis button
+- Instant access to the first emergency contact
 
-✅ Secure Sign In
-
-✅ Continue as Guest
-
-✅ Demo Mode (No Supabase Required)
-
-</td>
-
-<td width="50%">
-
-### 📂 Memory Vault
-
-Organize life's important moments with ease.
-
-- 👨‍👩‍👧 Family
-- 🤝 Friends
-- 📅 Important Events
-- 📍 Places
-- 💊 Medications
-- 📝 Personal Notes
-- 🎂 Important Dates
-- ❤️ Favorite Things
-- 🔍 Lost Items
-
-Each memory includes:
-
-- Title
-- Description
-- Date
-- Tags
-- AI-generated Summary
-
-</td>
-</tr>
-
-<tr>
-<td>
-
-### 🤖 AI Memory Companion
-
-Ask questions naturally instead of searching manually.
-
-Examples:
-
-> "Who is Ahmed?"
-
-> "Where did I leave my glasses?"
-
-> "When is my next appointment?"
-
-### The AI
-
-✅ Uses only your saved memories
-
-✅ Never invents information
-
-✅ Maintains chat history
-
-✅ Gives honest responses when information doesn't exist
-
-</td>
-
-<td>
-
-### 😊 Mood Tracker
-
-Track emotional wellbeing with a clean and calming interface.
-
-Available moods:
-
-😊 Happy
-
-😌 Calm
-
-😢 Sad
-
-😟 Confused
-
-😰 Anxious
-
-😴 Tired
-
-Features:
-
-- Daily mood logging
-- Optional notes
-- 7-Day trend visualization
-- Guest mood tracking
-- Authenticated mood history
-
-</td>
-</tr>
-
-<tr>
-<td>
-
-### 🚨 Emergency SOS
-
-Designed for quick access during emergencies.
-
-Features:
-
-- One-tap calling
-- Emergency contact storage
-- Large accessible emergency button
-- Instant access to first emergency contact
-
-</td>
-
-<td>
-
-### 🔒 Privacy & Security
-
-Your memories remain yours.
-
-✔ Private by Design
-
-✔ User-scoped storage
-
-✔ Guest data isolation
-
-✔ Secure Authentication
-
-✔ AI receives only necessary memory context
-
-✔ No data shared between users
-
-</td>
-</tr>
-</table>
+### Data Privacy & Persistence
+- Secure email/password authentication via Supabase (or Demo Mode for testing)
+- User data scoped to individual accounts — **no data mixing between users**
+- Guest data fully separated from authenticated accounts
+- Private by design: only the user's *question* is sent to the AI, never the full database
 
 ---
 
-# 🤖 AI Features
+## 🤖 The AI Feature
 
-## 🧠 Intelligent Memory Companion
+The **AI Memory Companion** is the core intelligent feature of the app. When a user asks a question, the app sends their saved Memory Vault plus their question to a Groq-hosted Llama model, governed by a strict, self-authored system prompt that forces the model to answer only from what the user has recorded — never to invent people, dates, or facts.
 
-The heart of YaadNama AI is its intelligent Memory Companion.
+**Model used:** `llama-3.3-70b-versatile` via Groq's OpenAI-compatible API 
+**Called from:** a server-side Next.js API route (`/api/ai`), so the API key is never exposed to the browser.
 
-Rather than acting like a traditional chatbot, the AI behaves as a trusted memory assistant.
+#### System Prompt — Memory Companion
 
-When a user asks a question:
-
-1. Their saved memories are collected.
-2. The user's question is added.
-3. Both are securely sent to the Groq-hosted Llama model.
-4. A strict system prompt prevents hallucinations.
-5. The AI responds only using recorded memories.
-
-If information does not exist, it politely explains that it hasn't yet been recorded.
-
----
-
-## ✨ AI Auto Summaries
-
-Every saved memory automatically receives an AI-generated summary.
-
-Benefits:
-
-- Faster browsing
-- Cleaner dashboard
-- Easier searching
-- Better accessibility
-
-The summaries are:
-
-✅ Short
-
-✅ Friendly
-
-✅ Based only on user-written information
-
-✅ Never fabricated
-
----
-
-# 🧠 AI Workflow
-
-```mermaid
-flowchart LR
-
-A[User asks a question]
---> B[Retrieve Personal Memories]
-
-B --> C[Groq Llama 3.3 Model]
-
-C --> D[Strict System Prompt]
-
-D --> E[Generate Safe Response]
-
-E --> F[Display Answer]
+```
+You are YaadNama AI, a compassionate memory companion.
+Your purpose is to help users remember people, places, appointments, medications, routines, and important life events.
+Always prioritize information stored in the user's personal memory database, which will be provided to you as a list of saved memories before each question.
+Never invent or assume memories. Only answer using what is explicitly present in the provided memories.
+If information does not exist in the provided memories, politely explain that it has not yet been recorded and invite the user to save it.
+Speak gently, respectfully, and clearly. Keep responses concise (2-4 sentences) and encouraging.
+Do not provide medical diagnoses or replace professional healthcare advice.
 ```
 
+#### Secondary AI Behavior — Auto-Summaries
+
+Every memory saved to the vault is automatically passed to the same model with an instruction to generate a **warm, one-line summary (under 18 words)** based strictly on what the user wrote — never invented, never embellished, never adding facts that weren't in the original entry.
+
+**Why this matters:** for someone whose memory is already unreliable, an AI that "helpfully" fills in gaps or guesses is actively harmful. Both AI behaviors in this app are constrained, on purpose, to be *retrieval and summarization tools*, not creative or speculative ones.
+
 ---
 
-# 🏗️ Application Architecture
+## 🛠️ Tech Stack
 
-```mermaid
-flowchart TD
+| Component | Technology |
+|---|---|
+| Frontend Framework | Next.js 14 (App Router) + React 18 |
+| Styling | Tailwind CSS (responsive, accessible design) |
+| Authentication | Supabase (email/password) + Demo Mode (for testing) |
+| Data Storage | Browser `localStorage`, scoped per user email |
+| AI Model | Groq — `llama-3.3-70b-versatile` (OpenAI-compatible API) |
+| API Routes | Next.js server-side API (`/api/ai`) — key never exposed to the client |
+| Hosting | Vercel |
+| Version Control | GitHub |
 
-User
+---
 
-User --> NextJS
+## 🔐 Authentication Architecture
 
-NextJS --> Authentication
+**Sign Up Flow**
+1. User clicks "Create Account" on the landing page
+2. Enters email and password, with validation
+3. *Demo Mode:* user is stored in `localStorage` under `yaadnama_demo_user`
+4. *Production:* user is registered via Supabase Auth
+5. User is redirected to the Dashboard with full user context
 
-NextJS --> Memory Vault
+**Sign In Flow**
+1. User clicks "Sign In" or visits `/login`
+2. Enters email and password
+3. *Demo Mode:* user is retrieved from `localStorage`
+4. *Production:* authenticated via Supabase with a JWT
+5. Redirected to Dashboard
 
-NextJS --> Mood Tracker
+**Guest Flow**
+1. User clicks "Continue as Guest"
+2. Gains access to `/mood/guest` with no authentication
+3. Can track moods freely — data is stored under a separate `guest` key, fully isolated from any authenticated account
 
-NextJS --> Emergency SOS
+**Protected vs. Public Routes**
 
-Memory Vault --> LocalStorage
+| Route | Access |
+|---|---|
+| `/dashboard` | Requires authentication |
+| `/memories` | Requires authentication |
+| `/companion` | Requires authentication |
+| `/mood` | Requires authentication |
+| `/mood/guest` | Public — no auth needed |
 
-Authentication --> Supabase
+---
 
-NextJS --> AI API
+## 💾 Data Storage & Scoping
 
-AI API --> Groq Llama Model
+**Authenticated user data** is namespaced as:
+```
+yaadnama_{feature}_{userEmail}
+```
+Examples: `yaadnama_memories_user@example.com`, `yaadnama_moods_user@example.com`, `yaadnama_chatHistory_user@example.com`
+
+**Guest data** is namespaced separately as:
+```
+yaadnama_{feature}_guest
 ```
 
----
-
-# ⚙️ Technology Stack
-
-| Category | Technology |
-|------------|------------|
-| 🎨 Frontend | Next.js 14 (App Router) |
-| ⚛️ UI Library | React 18 |
-| 🎨 Styling | Tailwind CSS |
-| 🔐 Authentication | Supabase Authentication |
-| 💾 Data Storage | Browser LocalStorage |
-| 🤖 AI Model | Groq Llama 3.3 70B Versatile |
-| 🔌 API | Next.js Server API |
-| ☁️ Deployment | Vercel |
-| 📂 Version Control | GitHub |
+**Guarantees:**
+- ✅ No data mixing between authenticated users
+- ✅ Guest data fully isolated from account holders
+- ✅ Each user has complete privacy by default
+- ✅ Data persists across browser sessions
+- ✅ Guest mood tracking can be used even while logged in as a different user
 
 ---
 
-# 📸 Application Modules
+## 🚀 Getting Started
 
-| Module | Purpose |
-|---------|----------|
-| 🏠 Dashboard | User overview and statistics |
-| 📂 Memory Vault | Save and organize memories |
-| 🤖 AI Companion | Natural language memory retrieval |
-| 😊 Mood Tracker | Emotional wellbeing tracking |
-| 🚨 Emergency SOS | Emergency contacts |
-| ⚙️ Settings | User preferences |
-| 🔐 Authentication | Secure login & registration |
+### Prerequisites
+- Node.js 18+ and npm
+- A free Groq API key → [console.groq.com/keys](https://console.groq.com/keys)
 
----
-
-# 🌟 Why YaadNama?
-
-Unlike ordinary note-taking applications, YaadNama focuses on **memory accessibility rather than memory storage.**
-
-Instead of remembering where information was saved...
-
-Users simply remember how to ask.
-
-That simple difference makes YaadNama a compassionate assistant rather than just another notes application.
-
----
-# 🚀 Getting Started
-
-Follow these steps to run YaadNama AI on your local machine.
-
----
-
-## 📋 Prerequisites
-
-Before getting started, make sure you have:
-
-- ✅ Node.js 18+
-- ✅ npm
-- ✅ A free Groq API Key
-- ✅ (Optional) Supabase Project
-
----
-
-## 📦 Installation
+### Installation
 
 ```bash
 # Clone the repository
-git clone <your-repository-url>
-
-# Navigate to the project
+git clone https://github.com/<your-username>/yaadnama.git
 cd yaadnama
 
 # Install dependencies
 npm install
 
-# Copy environment variables
+# Create your environment file
 cp .env.example .env.local
 
-# Start development server
+# Add your Groq API key to .env.local
+# (Supabase credentials are optional — the app runs fully in Demo Mode without them)
+
+# Start the development server
 npm run dev
 ```
 
-Visit:
+Open **[http://localhost:3001](http://localhost:3001)** in your browser.
 
+### Environment Variables
+
+Create a `.env.local` file in the project root:
+
+```bash
+# Required: Groq API key (free from https://console.groq.com/keys)
+GROQ_API_KEY=your_groq_api_key_here
+
+# Optional: Supabase credentials (for production authentication)
+NEXT_PUBLIC_SUPABASE_URL=your_supabase_project_url
+NEXT_PUBLIC_SUPABASE_ANON_KEY=your_supabase_anon_key
 ```
-http://localhost:3001
-```
+
+> ⚠️ **Never commit API keys or secrets to GitHub.** They must only ever exist as environment variables, both locally (`.env.local`, which is git-ignored) and on your hosting provider.
+
+### Testing Without Authentication (Demo Mode)
+
+The app runs in **Demo Mode by default**, so it can be fully tested without any Supabase setup:
+
+- **Demo login:** works with any email/password combination
+- **Guest mood tracking:** fully functional with no login
+- **All data:** stored in browser `localStorage`, persists across refreshes
+
+### Switching to Production (Supabase)
+
+1. Create a free account at [supabase.com](https://supabase.com)
+2. From **Project Settings → API**, copy your **Project URL** and **Anon Key**
+3. Add both to `.env.local`
+4. In `lib/demo.js`, set:
+   ```js
+   export const DEMO_MODE = false;
+   ```
+5. Restart the dev server and create a real account from the login page
 
 ---
 
-# 🔑 Environment Variables
+## ☁️ Deploying to Vercel
 
-Create a `.env.local` file inside the project root.
-
-```env
-# Required
-GROQ_API_KEY=your_groq_api_key
-
-# Optional (Production Authentication)
-NEXT_PUBLIC_SUPABASE_URL=your_project_url
-NEXT_PUBLIC_SUPABASE_ANON_KEY=your_project_key
-```
-
-> **Note:** The application works completely in **Demo Mode** without Supabase.
+1. Push the repository to GitHub (must be **public**)
+2. Go to [vercel.com](https://vercel.com) and sign in with GitHub
+3. Click **Add New Project** and import the repository
+4. Under **Project Settings → Environment Variables**, add:
+   - `GROQ_API_KEY` *(required)*
+   - `NEXT_PUBLIC_SUPABASE_URL` *(optional, for production auth)*
+   - `NEXT_PUBLIC_SUPABASE_ANON_KEY` *(optional, for production auth)*
+5. Click **Deploy** — Vercel will generate a live public URL
 
 ---
 
-# 📂 Project Structure
+## 📁 Project Structure
 
-```text
+```
 yaadnama/
-│
 ├── app/
+│   ├── layout.js              # Root layout with nav and auth wrapper
+│   ├── page.js                # Landing page (Sign In / Sign Up / Guest)
+│   ├── globals.css            # Global styles
 │   ├── api/
-│   │   └── ai/
-│   ├── dashboard/
-│   ├── memories/
-│   ├── companion/
-│   ├── mood/
-│   ├── emergency/
-│   ├── login/
-│   ├── register/
-│   ├── settings/
-│   ├── globals.css
-│   ├── layout.js
-│   └── page.js
-│
+│   │   └── ai/route.js        # AI API endpoint (memory chat & summaries)
+│   ├── login/page.js          # Sign In page
+│   ├── register/page.js       # Create Account page
+│   ├── dashboard/page.js      # Main dashboard (authenticated)
+│   ├── memories/page.js       # Memory Vault (authenticated)
+│   ├── companion/page.js      # AI Companion chat (authenticated)
+│   ├── mood/page.js           # Mood Tracker (authenticated)
+│   ├── mood/guest/page.js     # Guest Mood Tracker (public)
+│   ├── emergency/page.js      # SOS Emergency Contacts
+│   └── settings/page.js       # User Settings
 ├── components/
-│   ├── Nav.js
-│   ├── RequireProfile.js
-│   └── SettingsProvider.js
-│
+│   ├── Nav.js                 # Navigation header with auth
+│   ├── RequireProfile.js      # Auth guard for protected routes
+│   └── SettingsProvider.js    # Global settings context
 ├── lib/
-│   ├── auth.js
-│   ├── storage.js
-│   ├── demo.js
-│   └── supabase.js
-│
-├── screenshots/
-│
-├── public/
-│
-├── .env.example
-├── package.json
-└── README.md
+│   ├── auth.js                # Supabase auth functions
+│   ├── supabase.js            # Supabase client initialization
+│   ├── storage.js             # localStorage wrapper with scoping
+│   └── demo.js                # Demo mode flag
+├── .env.local                 # Environment variables (not committed)
+├── .env.example                # Example env file
+└── package.json
 ```
 
 ---
 
-# 🔐 Authentication Flow
+## ✅ Validation Checklist
 
-```mermaid
-flowchart TD
-
-Landing --> Login
-
-Landing --> Register
-
-Landing --> Guest
-
-Login --> Dashboard
-
-Register --> Dashboard
-
-Guest --> GuestMoodTracker
-
-Dashboard --> MemoryVault
-
-Dashboard --> AICompanion
-
-Dashboard --> MoodTracker
-
-Dashboard --> EmergencySOS
-
-Dashboard --> Settings
-```
+- [ ] Create account with email/password validation
+- [ ] Sign in returns to dashboard with correct user email
+- [ ] Add memory in authenticated account
+- [ ] Memory persists after page refresh
+- [ ] Add mood as authenticated user
+- [ ] Mood data persists after refresh
+- [ ] AI companion responds and retains chat history
+- [ ] Guest mood tracking works without login
+- [ ] Guest moods don't appear in authenticated account
+- [ ] Sign out clears demo user from localStorage
+- [ ] Demo mode works with zero Supabase credentials
 
 ---
 
-# 💾 Data Storage Architecture
-
-Every user's information is isolated.
-
-```
-Authenticated User
-
-yaadnama_memories_email
-
-yaadnama_moods_email
-
-yaadnama_chatHistory_email
-```
-
-Guest Mode
-
-```
-yaadnama_moods_guest
-```
-
-### Privacy Features
-
-- ✅ Separate data for every user
-- ✅ Guest data never mixes with authenticated users
-- ✅ Local storage persists across sessions
-- ✅ AI accesses only relevant memory data
-- ✅ Privacy-first architecture
-
----
-
-# 🎮 Demo Mode
-
-YaadNama includes a fully functional Demo Mode.
-
-### Features
-
-- Login with any email
-- No Supabase required
-- Save memories
-- Chat with AI
-- Track moods
-- Persistent LocalStorage
-- Full application experience
-
-Perfect for testing and demonstrations.
-
----
-
-# ☁️ Deploy to Vercel
-
-Deploying YaadNama is simple.
-
-1. Push the project to GitHub.
-2. Import the repository into Vercel.
-3. Configure environment variables.
-4. Deploy.
-
-Required Variables
-
-```
-GROQ_API_KEY
-
-NEXT_PUBLIC_SUPABASE_URL
-
-NEXT_PUBLIC_SUPABASE_ANON_KEY
-```
-
-⚠️ Never commit API keys to GitHub.
-
----
-
-# 📸 Screenshots
-
-Replace these placeholders with actual screenshots.
-
-| Landing Page | Dashboard |
-|--------------|-----------|
-| ![](screenshots/landing.png) | ![](screenshots/dashboard.png) |
-
-| Memory Vault | AI Companion |
-|---------------|--------------|
-| ![](screenshots/memory.png) | ![](screenshots/chat.png) |
-
-| Mood Tracker | Emergency SOS |
-|---------------|---------------|
-| ![](screenshots/mood.png) | ![](screenshots/emergency.png) |
-
----
-
-# 🛣️ Future Roadmap
-
-- [ ] Caregiver Portal
-- [ ] Voice Assistant
-- [ ] Speech-to-Text Memory Saving
-- [ ] Text-to-Speech Responses
-- [ ] Medication Notifications
-- [ ] Smart Appointment Reminders
-- [ ] Cloud Synchronization
-- [ ] AI Daily Journal
-- [ ] Mobile Application
-- [ ] Multi-language Support
-
----
-
-# 🐞 Troubleshooting
+## 🐛 Troubleshooting
 
 | Issue | Solution |
-|--------|----------|
-| App won't start | Verify Node.js version and reinstall dependencies |
-| AI isn't responding | Check `GROQ_API_KEY` in `.env.local` |
-| Login issues | Ensure Demo Mode is enabled or Supabase credentials are correct |
-| Data missing | Verify LocalStorage and browser permissions |
-| Guest data unavailable | Open the Guest Mood Tracker page |
+|---|---|
+| App stuck on loading | Check the browser console for errors, verify `GROQ_API_KEY` in `.env.local`, restart the dev server |
+| Demo login not working | Verify `DEMO_MODE = true` in `lib/demo.js`; clear localStorage and refresh |
+| Supabase auth failing | Confirm credentials in `.env.local`; restart dev server; check `DEMO_MODE = false` |
+| Data not persisting | Check DevTools → Application → Local Storage; verify the correct email is being used; clear cache |
+| Guest moods not saving | Ensure you're on `/mood/guest` (not `/mood`); check localStorage under `yaadnama_moods_guest` |
+| Memories not showing in companion | Ensure memories are saved in the authenticated account — the AI can only see that account's vault |
 
 ---
 
-# 📈 Performance
+## 🗺️ Future Roadmap
 
-YaadNama is designed with performance and accessibility in mind.
+This is an MVP built to demonstrate a real, working, end-to-end solution. Planned additions:
 
-- ⚡ Fast Next.js App Router
-- 🔒 Secure server-side API handling
-- 🧠 AI-powered memory retrieval
-- 💾 Offline-friendly LocalStorage
-- ♿ Accessible UI with low cognitive load
-- 🌙 High-contrast and readable interface
-
----
-
-# 🤝 Contributing
-
-Contributions are welcome!
-
-1. Fork the repository.
-2. Create a feature branch.
-
-```bash
-git checkout -b feature/YourFeature
-```
-
-3. Commit your changes.
-
-```bash
-git commit -m "Add amazing feature"
-```
-
-4. Push the branch.
-
-```bash
-git push origin feature/YourFeature
-```
-
-5. Open a Pull Request.
+- **Caregiver Portal** — permissioned shared access for family members
+- **Voice Features** — speech-to-text input and text-to-speech output
+- **Smart Reminders** — medication alerts and appointment notifications
+- **Cross-Device Sync** — real cloud database backend (currently localStorage-only)
+- **AI Journal** — auto-generated daily life narratives from all recorded activity
 
 ---
 
-# 📄 License
+## 📄 License
 
-This project is licensed under the **MIT License**.
-
----
-
-# 💙 Acknowledgements
-
-Special thanks to the amazing open-source technologies that made this project possible.
-
-- Next.js
-- React
-- Tailwind CSS
-- Groq
-- Supabase
-- Vercel
+<!-- TODO: choose and add a license, e.g. MIT -->
+This project is submitted as an individual academic final project.
 
 ---
 
-<div align="center">
+## 🙏 About This Project
 
-# 🧠 YaadNama AI
+YaadNama AI was designed and built end-to-end as an original solution to a real problem faced by people living with memory challenges and the families who support them. It is not a template, tutorial clone, or derivative of an existing project.
 
-### *Helping people remember what matters most.*
+**Questions or feedback?** Open an issue on the GitHub repository above.
 
----
-
-**Built with ❤️ for individuals living with memory challenges.**
-
-If you found this project helpful, consider giving it a ⭐ on GitHub.
-
-### Thank you for visiting!
-
-</div>
- 
- 
+*Built with care.*
