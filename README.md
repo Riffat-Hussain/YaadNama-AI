@@ -1,29 +1,5 @@
 <div align="center">
 
-# 🧠 YaadNama AI (یادنامہ)
-
-### *Your Intelligent Memory Companion*
-
-> **"Helping people remember what matters most."**
-
-🌐 **Live Demo:** https://yaad-nama-ai.vercel.app
-
-</div>
-
----
-
-> **YaadNama** *(Urdu: یادنامہ)* translates to **"Memory Journal."**  
-> It is a private, AI-powered companion designed for people experiencing memory challenges, providing a gentle space to preserve the people, places, medications, and life moments that matter—and retrieve them naturally whenever needed.
-
-> 🎓 **This project is an original, independently designed and developed final project.**  
-> It is **not** based on a template, tutorial, or cloned application.
-
----
-
-
-
-<div align="center">
-
 # 🧠 YaadNama AI
 
 ### یادنامہ
