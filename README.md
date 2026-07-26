@@ -27,10 +27,6 @@
 
 ---
 
-
-
-
-
 <div align="center">
 
 ## 🌐 Live Demo
@@ -74,8 +70,8 @@
 </div>
 
 ---
-<div align="center">
-  ## 🎯 The Problem
+
+## 🎯 The Problem
 
 People experiencing memory decline — through early Alzheimer's, mild cognitive decline, or brain-injury recovery — don't just forget facts. They lose confidence in their own independence.
 
@@ -94,7 +90,7 @@ You save something once, in your own words, in a calm interface built for low-vi
 - *"What medication do I take in the mornings?"*
 
 The app answers **only from what you actually saved** — never guessing, never inventing.
-</div>
+
 ---
 
 ## 📸 Screenshots
@@ -251,6 +247,7 @@ Explore the key screens of the application, from authentication to AI-powered me
 - User data scoped to individual accounts — no data mixing between users.
 - Guest data fully separated from authenticated accounts.
 - Private by design: only the user's question is sent to the AI, never the full database.
+
 ---
 
 # 🤖 AI Memory Companion
@@ -319,6 +316,7 @@ flowchart LR
     Groq -->|grounded answer| API
     API -->|response| FE
 ```
+
 ---
 
 ## 🔐 Authentication Architecture
@@ -532,8 +530,6 @@ This is an MVP built to demonstrate a real, working, end-to-end solution. Planne
 
 ---
 
----
-
 <div align="center">
 
 # 📜 License
@@ -557,7 +553,6 @@ This project is submitted as an **individual academic final project**.
 **YaadNama AI** was conceived, designed, developed, and deployed entirely by the author as an original end-to-end AI application. Inspired by the real challenges faced by individuals experiencing memory loss and the families who support them, the project combines compassionate design with modern AI to create a secure, intelligent memory companion.
 
 Every aspect of the application—from the user experience and authentication flow to the AI-powered Memory Companion and deployment—was built specifically for this project.
-
 
 <div align="center">
 
