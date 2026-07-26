@@ -222,23 +222,24 @@ sequenceDiagram
     Groq-->>API: Answer grounded only in the vault
     API-->>App: Response
     App-->>U: Gentle, concise reply
+```
 
 ---
 
 ## 🛠️ Tech Stack
 
-| Component            | Technology                                                              |
+| Component | Technology |
 | :-------------------- | :----------------------------------------------------------------------- |
-| Frontend Framework   | Next.js 14 (App Router) + React 18                                     |
-| Styling              | Tailwind CSS (responsive, accessible design)                           |
-| Authentication       | Supabase (email/password) + Demo Mode (for testing)                    |
-| Data Storage         | Browser `localStorage`, scoped per user email                          |
-| AI Model             | Groq — `llama-3.3-70b-versatile` (OpenAI-compatible API)               |
-| API Routes           | Next.js server-side API (`/api/ai`) — key never exposed to the client  |
-| Hosting              | Vercel                                                                  |
-| Version Control      | GitHub                                                                  |
+| Frontend Framework | Next.js 14 (App Router) + React 18 |
+| Styling | Tailwind CSS (responsive, accessible design) |
+| Authentication | Supabase (email/password) + Demo Mode (for testing) |
+| Data Storage | Browser `localStorage`, scoped per user email |
+| AI Model | Groq — `llama-3.3-70b-versatile` (OpenAI-compatible API) |
+| API Routes | Next.js server-side API (`/api/ai`) — key never exposed to the client |
+| Hosting | Vercel |
+| Version Control | GitHub |
 
-### System Architecture
+### 🏗️ System Architecture
 
 ```mermaid
 flowchart LR
@@ -250,7 +251,6 @@ flowchart LR
     Groq -->|grounded answer| API
     API -->|response| FE
 ```
-
 ---
 
 ## 🔐 Authentication Architecture
