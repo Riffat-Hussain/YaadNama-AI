@@ -622,9 +622,7 @@ This is an MVP built to demonstrate a real, working, end-to-end solution. Planne
 
 # 📜 License
 
-This project is submitted as an **individual academic final project**.
-
-*No open-source license has been applied at this time.*
+This project is submitted as an **individual academic final project for ACT Ai**.
 
 </div>
 
@@ -648,7 +646,7 @@ Every aspect of the application—from the user experience and authentication fl
 
 If you have any questions, suggestions, or feedback, feel free to **open an issue** on this GitHub repository.
 
-**Built with ❤️, empathy, and AI.**
+**Built with ❤️, empathy, and AI. by Rifat Hussain**
 
 </div>
 
