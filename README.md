@@ -72,13 +72,38 @@ The app answers **only from what you actually saved** — never guessing, never 
   3. Replace the paths below with the actual filenames.
 -->
 
-| Landing / Sign In | Dashboard | Memory Vault |
-|---|---|---|
-| ![Landing page](./screenshots/landing.png) | ![Dashboard](./screenshots/dashboard.png) | ![Memory Vault](./screenshots/memories.png) |
+<table>
+  <tr>
+    <td align="center" width="33%">
+      <img src="./screenshots/landing.png" width="260" alt="Landing page"/><br/>
+      <sub><b>Landing / Sign In</b></sub>
+    </td>
+    <td align="center" width="33%">
+      <img src="./screenshots/dashboard.png" width="260" alt="Dashboard"/><br/>
+      <sub><b>Dashboard</b></sub>
+    </td>
+    <td align="center" width="33%">
+      <img src="./screenshots/memories.png" width="260" alt="Memory Vault"/><br/>
+      <sub><b>Memory Vault</b></sub>
+    </td>
+  </tr>
+  <tr>
+    <td align="center">
+      <img src="./screenshots/companion.png" width="260" alt="AI Companion chat"/><br/>
+      <sub><b>AI Companion Chat</b></sub>
+    </td>
+    <td align="center">
+      <img src="./screenshots/mood.png" width="260" alt="Mood tracker"/><br/>
+      <sub><b>Mood Tracker</b></sub>
+    </td>
+    <td align="center">
+      <img src="./screenshots/emergency.png" width="260" alt="Emergency SOS"/><br/>
+      <sub><b>Emergency SOS</b></sub>
+    </td>
+  </tr>
+</table>
 
-| AI Companion Chat | Mood Tracker | Emergency SOS |
-|---|---|---|
-| ![AI Companion](./screenshots/companion.png) | ![Mood Tracker](./screenshots/mood.png) | ![Emergency SOS](./screenshots/emergency.png) |
+*(All six images are the same fixed width so the grid stays aligned — swap in your own screenshots at the paths above.)*
 
 ---
 
@@ -147,6 +172,25 @@ Speak gently, respectfully, and clearly. Keep responses concise (2-4 sentences) 
 Do not provide medical diagnoses or replace professional healthcare advice.
 ```
 
+#### How a Question Gets Answered
+
+```mermaid
+sequenceDiagram
+    participant U as User
+    participant App as YaadNama (client)
+    participant API as /api/ai (server route)
+    participant Groq as Groq LLM
+
+    U->>App: "Who is Ahmed?"
+    App->>API: question + saved Memory Vault
+    API->>Groq: system prompt + vault + question
+    Groq-->>API: answer grounded only in the vault
+    API-->>App: response
+    App-->>U: gentle, concise reply
+```
+
+The API key lives only on the server side of this exchange — it's never sent to, or visible in, the browser.
+
 #### Secondary AI Behavior — Auto-Summaries
 
 Every memory saved to the vault is automatically passed to the same model with an instruction to generate a **warm, one-line summary (under 18 words)** based strictly on what the user wrote — never invented, never embellished, never adding facts that weren't in the original entry.
@@ -157,49 +201,65 @@ Every memory saved to the vault is automatically passed to the same model with a
 
 ## 🛠️ Tech Stack
 
-| Component | Technology |
-|---|---|
-| Frontend Framework | Next.js 14 (App Router) + React 18 |
-| Styling | Tailwind CSS (responsive, accessible design) |
-| Authentication | Supabase (email/password) + Demo Mode (for testing) |
-| Data Storage | Browser `localStorage`, scoped per user email |
-| AI Model | Groq — `llama-3.3-70b-versatile` (OpenAI-compatible API) |
-| API Routes | Next.js server-side API (`/api/ai`) — key never exposed to the client |
-| Hosting | Vercel |
-| Version Control | GitHub |
+| Component            | Technology                                                              |
+| :-------------------- | :----------------------------------------------------------------------- |
+| Frontend Framework   | Next.js 14 (App Router) + React 18                                     |
+| Styling              | Tailwind CSS (responsive, accessible design)                           |
+| Authentication       | Supabase (email/password) + Demo Mode (for testing)                    |
+| Data Storage         | Browser `localStorage`, scoped per user email                          |
+| AI Model             | Groq — `llama-3.3-70b-versatile` (OpenAI-compatible API)               |
+| API Routes           | Next.js server-side API (`/api/ai`) — key never exposed to the client  |
+| Hosting              | Vercel                                                                  |
+| Version Control      | GitHub                                                                  |
+
+### System Architecture
+
+```mermaid
+flowchart LR
+    U((User)) --> FE[Next.js Frontend<br/>React 18 + Tailwind]
+    FE -->|email / password| Auth[(Supabase Auth)]
+    FE -->|read / write memories & moods| LS[(Browser localStorage)]
+    FE -->|question or new memory| API[/api/ai server route/]
+    API -->|system prompt + vault + question| Groq[(Groq LLM<br/>llama-3.3-70b-versatile)]
+    Groq -->|grounded answer| API
+    API -->|response| FE
+```
 
 ---
 
 ## 🔐 Authentication Architecture
 
-**Sign Up Flow**
-1. User clicks "Create Account" on the landing page
-2. Enters email and password, with validation
-3. *Demo Mode:* user is stored in `localStorage` under `yaadnama_demo_user`
-4. *Production:* user is registered via Supabase Auth
-5. User is redirected to the Dashboard with full user context
+```mermaid
+flowchart TD
+    Start([Landing Page]) --> Choice{Choose a path}
 
-**Sign In Flow**
-1. User clicks "Sign In" or visits `/login`
-2. Enters email and password
-3. *Demo Mode:* user is retrieved from `localStorage`
-4. *Production:* authenticated via Supabase with a JWT
-5. Redirected to Dashboard
+    Choice -->|Create Account| SU1[Enter email + password]
+    SU1 --> SU2{Demo Mode?}
+    SU2 -->|Yes| SU3[Store user in localStorage<br/>yaadnama_demo_user]
+    SU2 -->|No| SU4[Register via Supabase Auth]
+    SU3 --> Dash([Dashboard])
+    SU4 --> Dash
 
-**Guest Flow**
-1. User clicks "Continue as Guest"
-2. Gains access to `/mood/guest` with no authentication
-3. Can track moods freely — data is stored under a separate `guest` key, fully isolated from any authenticated account
+    Choice -->|Sign In| SI1[Enter email + password]
+    SI1 --> SI2{Demo Mode?}
+    SI2 -->|Yes| SI3[Retrieve user from localStorage]
+    SI2 -->|No| SI4[Authenticate via Supabase JWT]
+    SI3 --> Dash
+    SI4 --> Dash
+
+    Choice -->|Continue as Guest| G1["/mood/guest (no auth)"]
+    G1 --> G2[Track mood under separate<br/>guest key — fully isolated]
+```
 
 **Protected vs. Public Routes**
 
-| Route | Access |
-|---|---|
-| `/dashboard` | Requires authentication |
-| `/memories` | Requires authentication |
-| `/companion` | Requires authentication |
-| `/mood` | Requires authentication |
-| `/mood/guest` | Public — no auth needed |
+| Route         | Access                     |
+| :------------- | :--------------------------- |
+| `/dashboard`  | Requires authentication   |
+| `/memories`   | Requires authentication   |
+| `/companion`  | Requires authentication   |
+| `/mood`       | Requires authentication   |
+| `/mood/guest` | Public — no auth needed   |
 
 ---
 
@@ -355,14 +415,14 @@ yaadnama/
 
 ## 🐛 Troubleshooting
 
-| Issue | Solution |
-|---|---|
-| App stuck on loading | Check the browser console for errors, verify `GROQ_API_KEY` in `.env.local`, restart the dev server |
-| Demo login not working | Verify `DEMO_MODE = true` in `lib/demo.js`; clear localStorage and refresh |
-| Supabase auth failing | Confirm credentials in `.env.local`; restart dev server; check `DEMO_MODE = false` |
-| Data not persisting | Check DevTools → Application → Local Storage; verify the correct email is being used; clear cache |
-| Guest moods not saving | Ensure you're on `/mood/guest` (not `/mood`); check localStorage under `yaadnama_moods_guest` |
-| Memories not showing in companion | Ensure memories are saved in the authenticated account — the AI can only see that account's vault |
+| Issue                              | Solution                                                                                             |
+| :----------------------------------- | :------------------------------------------------------------------------------------------------------ |
+| App stuck on loading               | Check the browser console for errors, verify `GROQ_API_KEY` in `.env.local`, restart the dev server  |
+| Demo login not working             | Verify `DEMO_MODE = true` in `lib/demo.js`; clear localStorage and refresh                            |
+| Supabase auth failing              | Confirm credentials in `.env.local`; restart dev server; check `DEMO_MODE = false`                    |
+| Data not persisting                | Check DevTools → Application → Local Storage; verify the correct email is being used; clear cache    |
+| Guest moods not saving             | Ensure you're on `/mood/guest` (not `/mood`); check localStorage under `yaadnama_moods_guest`         |
+| Memories not showing in companion  | Ensure memories are saved in the authenticated account — the AI can only see that account's vault    |
 
 ---
 
@@ -390,5 +450,7 @@ This project is submitted as an individual academic final project.
 YaadNama AI was designed and built end-to-end as an original solution to a real problem faced by people living with memory challenges and the families who support them. It is not a template, tutorial clone, or derivative of an existing project.
 
 **Questions or feedback?** Open an issue on the GitHub repository above.
+
+*Built with care.*
 
 *Built with care.*
