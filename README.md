@@ -20,23 +20,26 @@
 > Deployed on **Vercel** and publicly accessible for evaluation.
 ---
 
-## 📖 Table of Contents
+## 📚 Table of Contents
 
-- [The Problem](#-the-problem)
-- [The Solution](#-the-solution)
-- [Screenshots](#-screenshots)
-- [Features](#-features)
-- [The AI Feature](#-the-ai-feature)
-- [Tech Stack](#-tech-stack)
-- [Authentication Architecture](#-authentication-architecture)
-- [Data Storage & Scoping](#-data-storage--scoping)
-- [Getting Started](#-getting-started)
-- [Deploying to Vercel](#-deploying-to-vercel)
-- [Project Structure](#-project-structure)
-- [Validation Checklist](#-validation-checklist)
-- [Troubleshooting](#-troubleshooting)
-- [Future Roadmap](#-future-roadmap)
-- [License](#-license)
+| | |
+|---|---|
+| 🧠 | About YaadNama |
+| 🎯 | Problem Statement |
+| 💡 | Solution |
+| ✨ | Features |
+| 🤖 | AI Memory Companion |
+| 📸 | Screenshots |
+| 🛠 | Tech Stack |
+| 🔐 | Authentication |
+| 🗄 | Data Storage |
+| 🚀 | Getting Started |
+| ☁️ | Deployment |
+| 📂 | Project Structure |
+| ✅ | Validation Checklist |
+| 🩺 | Troubleshooting |
+| 🌱 | Future Roadmap |
+| 📄 | License |
 
 ---
 
