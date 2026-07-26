@@ -14,21 +14,10 @@
   </a>
 </p>
 
-## 🌐 Live Demo
-
 🚀 **Explore the live application:**  
 ### https://yaad-nama-ai.vercel.app
 
 > Deployed on **Vercel** and publicly accessible for evaluation.
-<!--
-  TODO (required before submission):
-  Replace the link above with your actual deployed Vercel/hosting URL.
-  Test it yourself in an incognito window first — graders will open and use it directly.
--->
-
-**GitHub Repository:** `https://github.com/<your-username>/yaadnama` 
-<!-- TODO: replace with your actual public repo URL -->
-
 ---
 
 ## 📖 Table of Contents
