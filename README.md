@@ -71,7 +71,11 @@
 
 ---
 
+<div align="center">
+
 ## 🎯 The Problem
+
+</div>
 
 People experiencing memory decline — through early Alzheimer's, mild cognitive decline, or brain-injury recovery — don't just forget facts. They lose confidence in their own independence.
 
@@ -79,7 +83,11 @@ Sticky notes get lost. Whiteboards get erased. Family members end up re-explaini
 
 **Built for:** individuals with mild memory impairment, early-stage dementia, or brain-injury-related memory loss — and the family members who support them.
 
+<div align="center">
+
 ## 💡 The Solution
+
+</div>
 
 YaadNama lets people **talk to their own memories** instead of searching for them.
 
@@ -172,13 +180,21 @@ Explore the key screens of the application, from authentication to AI-powered me
 
 ---
 
+<div align="center">
+
 # ✨ Feature Showcase
 
-> *Discover the complete set of thoughtfully designed features that make **YaadNama AI** a secure, intelligent, and compassionate memory companion.*
+*Discover the complete set of thoughtfully designed features that make **YaadNama AI** a secure, intelligent, and compassionate memory companion.*
+
+</div>
 
 ---
 
+<div align="center">
+
 ## 🔐 Secure Authentication System
+
+</div>
 
 - **Create Account** — Secure email/password registration with validation.
 - **Sign In** — Authenticated access to a personal memory vault.
@@ -187,7 +203,11 @@ Explore the key screens of the application, from authentication to AI-powered me
 
 ---
 
+<div align="center">
+
 ## 🗂️ Intelligent Memory Vault
+
+</div>
 
 - Save memories under **9 categories**:
   - 👨‍👩‍👧 Family
@@ -206,7 +226,11 @@ Explore the key screens of the application, from authentication to AI-powered me
 
 ---
 
+<div align="center">
+
 ## 🤖 AI-Powered Memory Companion
+
+</div>
 
 - Chat interface for natural-language questions about saved memories.
 - Answers strictly from the user's personal vault — **never guesses or invents**.
@@ -215,7 +239,11 @@ Explore the key screens of the application, from authentication to AI-powered me
 
 ---
 
+<div align="center">
+
 ## 😊 Mood & Well-being Tracker
+
+</div>
 
 - Authenticated mood tracking — log moods (**Happy, Calm, Sad, Confused, Anxious, Tired**) with optional notes.
 - Guest mood tracking — anonymous check-ins with no login required.
@@ -224,7 +252,11 @@ Explore the key screens of the application, from authentication to AI-powered me
 
 ---
 
+<div align="center">
+
 ## 📊 Personalized Dashboard
+
+</div>
 
 - Warm, welcoming greeting.
 - Quick stats: memory vault count, today's mood, recent entries.
@@ -233,7 +265,11 @@ Explore the key screens of the application, from authentication to AI-powered me
 
 ---
 
+<div align="center">
+
 ## 🚨 Emergency SOS
+
+</div>
 
 - Store emergency contacts with one-tap calling.
 - Large, easy-to-access crisis button.
@@ -241,7 +277,11 @@ Explore the key screens of the application, from authentication to AI-powered me
 
 ---
 
+<div align="center">
+
 ## 🔒 Privacy, Security & Data Persistence
+
+</div>
 
 - Secure email/password authentication via **Supabase** (or **Demo Mode** for testing).
 - User data scoped to individual accounts — no data mixing between users.
@@ -250,13 +290,21 @@ Explore the key screens of the application, from authentication to AI-powered me
 
 ---
 
+<div align="center">
+
 # 🤖 AI Memory Companion
 
-> *The intelligence behind **YaadNama AI** is carefully designed to be trustworthy, privacy-conscious, and grounded entirely in the user's own memories.*
+*The intelligence behind **YaadNama AI** is carefully designed to be trustworthy, privacy-conscious, and grounded entirely in the user's own memories.*
+
+</div>
 
 ---
 
+<div align="center">
+
 ## 🧠 Core AI Capability
+
+</div>
 
 The **AI Memory Companion** is the core intelligent feature of the application. When a user asks a question, the app sends the user's saved **Memory Vault** together with their question to a **Groq-hosted Llama model**, governed by a **strict, self-authored system prompt** that forces the model to answer **only from what the user has recorded**—never to invent people, dates, or facts.
 
@@ -272,7 +320,11 @@ The **AI Memory Companion** is the core intelligent feature of the application. 
 
 ---
 
+<div align="center">
+
 ## 🔄 AI Request Flow
+
+</div>
 
 ```mermaid
 sequenceDiagram
@@ -291,7 +343,11 @@ sequenceDiagram
 
 ---
 
+<div align="center">
+
 ## 🛠️ Tech Stack
+
+</div>
 
 | Component | Technology |
 | :-------------------- | :----------------------------------------------------------------------- |
@@ -319,7 +375,11 @@ flowchart LR
 
 ---
 
+<div align="center">
+
 ## 🔐 Authentication Architecture
+
+</div>
 
 ```mermaid
 flowchart TD
@@ -355,7 +415,11 @@ flowchart TD
 
 ---
 
+<div align="center">
+
 ## 💾 Data Storage & Scoping
+
+</div>
 
 **Authenticated user data** is namespaced as:
 ```
@@ -377,7 +441,11 @@ yaadnama_{feature}_guest
 
 ---
 
+<div align="center">
+
 ## 🚀 Getting Started
+
+</div>
 
 ### Prerequisites
 - Node.js 18+ and npm
@@ -441,7 +509,11 @@ The app runs in **Demo Mode by default**, so it can be fully tested without any 
 
 ---
 
+<div align="center">
+
 ## ☁️ Deploying to Vercel
+
+</div>
 
 1. Push the repository to GitHub (must be **public**)
 2. Go to [vercel.com](https://vercel.com) and sign in with GitHub
@@ -454,7 +526,11 @@ The app runs in **Demo Mode by default**, so it can be fully tested without any 
 
 ---
 
+<div align="center">
+
 ## 📁 Project Structure
+
+</div>
 
 ```
 yaadnama/
@@ -489,7 +565,11 @@ yaadnama/
 
 ---
 
+<div align="center">
+
 ## ✅ Validation Checklist
+
+</div>
 
 - [ ] Create account with email/password validation
 - [ ] Sign in returns to dashboard with correct user email
@@ -505,7 +585,11 @@ yaadnama/
 
 ---
 
+<div align="center">
+
 ## 🐛 Troubleshooting
+
+</div>
 
 | Issue                              | Solution                                                                                             |
 | :----------------------------------- | :------------------------------------------------------------------------------------------------------ |
@@ -518,7 +602,11 @@ yaadnama/
 
 ---
 
+<div align="center">
+
 ## 🗺️ Future Roadmap
+
+</div>
 
 This is an MVP built to demonstrate a real, working, end-to-end solution. Planned additions:
 
@@ -561,5 +649,7 @@ Every aspect of the application—from the user experience and authentication fl
 If you have any questions, suggestions, or feedback, feel free to **open an issue** on this GitHub repository.
 
 **Built with ❤️, empathy, and AI.**
+
+</div>
 
 </div>
