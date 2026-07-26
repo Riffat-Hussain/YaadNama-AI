@@ -74,7 +74,8 @@
 </div>
 
 ---
-## 🎯 The Problem
+<div align="center">
+  ## 🎯 The Problem
 
 People experiencing memory decline — through early Alzheimer's, mild cognitive decline, or brain-injury recovery — don't just forget facts. They lose confidence in their own independence.
 
@@ -93,7 +94,7 @@ You save something once, in your own words, in a calm interface built for low-vi
 - *"What medication do I take in the mornings?"*
 
 The app answers **only from what you actually saved** — never guessing, never inventing.
-
+</div>
 ---
 
 ## 📸 Screenshots
@@ -557,14 +558,6 @@ This project is submitted as an **individual academic final project**.
 
 Every aspect of the application—from the user experience and authentication flow to the AI-powered Memory Companion and deployment—was built specifically for this project.
 
-> **Original Work Notice**
->
-> ✅ Independently designed and developed  
-> ✅ Solves a real-world problem  
-> ✅ Built from scratch as an end-to-end AI application  
-> ❌ Not a template  
-> ❌ Not a tutorial clone  
-> ❌ Not derived from an existing project
 
 <div align="center">
 
