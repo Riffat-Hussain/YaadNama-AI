@@ -100,7 +100,7 @@ The app answers **only from what you actually saved** — never guessing, never 
       <img src="./screenshots/sos.png" width="260" alt="Emergency SOS"/><br/>
       <sub><b>Emergency SOS</b></sub>
     <td align="center">
-      <img src="./screenshots/setting.png" width="260" alt="Emergency SOS"/><br/>
+      <img src="./screenshots/settings.png" width="260" alt="Emergency SOS"/><br/>
       <sub><b>Emergency SOS</b></sub>
 
     </td>
