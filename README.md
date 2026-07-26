@@ -108,50 +108,81 @@ The app answers **only from what you actually saved** — never guessing, never 
 
 ---
 
-## ✨ Features
+# ✨ Feature Showcase
 
-### Authentication System
-- **Create Account** — secure email/password registration with validation
-- **Sign In** — authenticated access to a personal memory vault
-- **Continue as Guest** — try mood tracking with no account needed
-- **Demo Mode** — test the full app locally without any Supabase credentials
+> *Discover the complete set of thoughtfully designed features that make **YaadNama AI** a secure, intelligent, and compassionate memory companion.*
 
-### Memory Vault
-- Save memories under **9 categories**: Family, Friends, Important Events, Places, Medications, Personal Notes, Important Dates, Favorite Things, Lost Items
-- Each memory stores a title, description, date, and optional tags
-- Automatic AI-generated one-line summary for every memory
-- Full-text search and category filtering
-- Easy edit and delete functionality
+---
 
-### AI Memory Companion
-- Chat interface for natural-language questions about saved memories
-- Answers **strictly** from the user's personal vault — never guesses or invents
-- Gives an honest response when information hasn't been recorded, and invites the user to save it
-- Full chat history persists across sessions
+## 🔐 Secure Authentication System
 
-### Mood Tracker
-- **Authenticated mood tracking** — log moods (Happy, Calm, Sad, Confused, Anxious, Tired) with optional notes
-- **Guest mood tracking** — anonymous check-ins, no login required
-- 7-day trend visualization of mood patterns
-- Timestamped entries, completely independent from authenticated user data
+- **Create Account** — Secure email/password registration with validation.
+- **Sign In** — Authenticated access to a personal memory vault.
+- **Continue as Guest** — Try mood tracking with no account needed.
+- **Demo Mode** — Test the full app locally without any Supabase credentials.
 
-### Dashboard
-- Warm, welcoming greeting
-- Quick stats: memory vault count, today's mood, recent entries
-- Quick navigation to every main feature
-- At-a-glance overview of saved memories
+---
 
-### Emergency SOS
-- Store emergency contacts with one-tap calling
-- Large, easy-to-access crisis button
-- Instant access to the first emergency contact
+## 🗂️ Intelligent Memory Vault
 
-### Data Privacy & Persistence
-- Secure email/password authentication via Supabase (or Demo Mode for testing)
-- User data scoped to individual accounts — **no data mixing between users**
-- Guest data fully separated from authenticated accounts
-- Private by design: only the user's *question* is sent to the AI, never the full database
+- Save memories under **9 categories**:
+  - 👨‍👩‍👧 Family
+  - 🤝 Friends
+  - 🎉 Important Events
+  - 📍 Places
+  - 💊 Medications
+  - 📝 Personal Notes
+  - 📅 Important Dates
+  - ❤️ Favorite Things
+  - 🔍 Lost Items
+- Each memory stores a title, description, date, and optional tags.
+- Automatic AI-generated one-line summary for every memory.
+- Full-text search and category filtering.
+- Easy edit and delete functionality.
 
+---
+
+## 🤖 AI-Powered Memory Companion
+
+- Chat interface for natural-language questions about saved memories.
+- Answers strictly from the user's personal vault — **never guesses or invents**.
+- Gives an honest response when information hasn't been recorded and invites the user to save it.
+- Full chat history persists across sessions.
+
+---
+
+## 😊 Mood & Well-being Tracker
+
+- Authenticated mood tracking — log moods (**Happy, Calm, Sad, Confused, Anxious, Tired**) with optional notes.
+- Guest mood tracking — anonymous check-ins with no login required.
+- 7-day trend visualization of mood patterns.
+- Timestamped entries, completely independent from authenticated user data.
+
+---
+
+## 📊 Personalized Dashboard
+
+- Warm, welcoming greeting.
+- Quick stats: memory vault count, today's mood, recent entries.
+- Quick navigation to every main feature.
+- At-a-glance overview of saved memories.
+
+---
+
+## 🚨 Emergency SOS
+
+- Store emergency contacts with one-tap calling.
+- Large, easy-to-access crisis button.
+- Instant access to the first emergency contact.
+
+---
+
+## 🔒 Privacy, Security & Data Persistence
+
+- Secure email/password authentication via **Supabase** (or **Demo Mode** for testing).
+- User data scoped to individual accounts — no data mixing between users.
+- Guest data fully separated from authenticated accounts.
+- Private by design: only the user's question is sent to the AI, never the full database.
 ---
 
 ## 🤖 The AI Feature
