@@ -1,0 +1,99 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #faf6ef;
+  --foreground: #2b2a28;
+}
+
+html {
+  font-size: 18px; /* larger base size for readability */
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: -apple-system, "Segoe UI", system-ui, sans-serif;
+}
+
+h1, h2, h3, .font-display {
+  font-family: "Iowan Old Style", "Palatino Linotype", Georgia, serif;
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible,
+[tabindex]:focus-visible {
+  outline: 3px solid #2b6664;
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}
+
+.keepsake-card {
+  position: relative;
+  background: #fffdf8;
+  border: 1px solid rgba(43, 42, 40, 0.08);
+}
+
+.keepsake-card::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 22px 22px 0;
+  border-color: transparent #f1e9d8 transparent transparent;
+  filter: drop-shadow(-1px 1px 1px rgba(43,42,40,0.12));
+}
+
+.dark {
+  --background: #1c2321;
+  --foreground: #f1ece0;
+}
+
+.dark .keepsake-card {
+  background: #263230;
+  border: 1px solid rgba(241, 236, 224, 0.12);
+}
+
+.dark .keepsake-card::after {
+  border-color: transparent #2f3c39 transparent transparent;
+}
+
+.dark .nav-surface {
+  background: #263230;
+  border-color: rgba(241, 236, 224, 0.12);
+}
+
+.high-contrast {
+  --background: #ffffff;
+  --foreground: #000000;
+}
+
+.high-contrast .keepsake-card {
+  background: #ffffff;
+  border: 2px solid #000000;
+}
+
+.high-contrast .keepsake-card::after {
+  border-color: transparent #000000 transparent transparent;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
