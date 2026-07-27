@@ -121,6 +121,7 @@ Explore the key screens of the application, from authentication to AI-powered me
 <br>
 
 <table>
+
 <tr>
 <td align="center" width="33%">
 
@@ -145,11 +146,9 @@ Explore the key screens of the application, from authentication to AI-powered me
 **📊 Dashboard**
 
 </td>
-
 </tr>
 
 <tr>
-
 <td align="center" width="33%">
 
 <img src="./screenshots/memory vault.png" width="280" alt="Memory Vault"/>
@@ -166,32 +165,36 @@ Explore the key screens of the application, from authentication to AI-powered me
 
 </td>
 
-</tr>
-
-</table>
-**🤖 AI Memory Companion**
-
-</td>
-
-<td align="center">
+<td align="center" width="33%">
 
 <img src="./screenshots/mood.png" width="280" alt="Mood Tracker"/>
 
 **😊 Mood Tracker**
 
 </td>
+</tr>
 
-<td align="center">
+<tr>
+<td align="center" width="33%">
 
 <img src="./screenshots/sos.png" width="280" alt="Emergency SOS"/>
 
 **🆘 Emergency SOS**
 
 </td>
+
+<td align="center" width="33%">
+
+</td>
+
+<td align="center" width="33%">
+
+</td>
 </tr>
+
 </table>
 
-<i>✨ Every screen was designed and implemented specifically for YaadNama AI as part of this original end-to-end final project.</i>
+<i>✨ Every screen was thoughtfully designed and implemented specifically for YaadNama AI as part of this original end-to-end final project.</i>
 
 </div>
 
@@ -214,9 +217,9 @@ Explore the key screens of the application, from authentication to AI-powered me
 </div>
 
 - **Create Account** — Secure email/password registration with validation.
-- **Sign In** — Authenticated access to a personal memory vault.
-- **Continue as Guest** — Try mood tracking with no account needed.
-- **Demo Mode** — Test the full app locally without any Supabase credentials.
+- **Sign In** — Authenticated access to your personal memory vault.
+- **Continue as Guest** — Explore selected features without creating an account.
+- **Demo Mode** — Experience the application locally without configuring Supabase.
 
 ---
 
