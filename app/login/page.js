@@ -1,37 +1,36 @@
 "use client";
 
+<<<<<<< HEAD
 import { Suspense, useState, useEffect } from "react";
 import Link from "next/link";
 import { useRouter, useSearchParams } from "next/navigation";
 import { Eye, EyeOff } from "lucide-react";
+=======
+import { useState } from "react";
+import Link from "next/link";
+import { useRouter } from "next/navigation";
+>>>>>>> 739d91392505da1464319e73b1bdc5aba28db2cd
 import { signIn } from "@/lib/auth";
 import { DEMO_MODE } from "@/lib/demo";
 
 function LoginForm() {
   const router = useRouter();
-  const searchParams = useSearchParams();
+
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [showPassword, setShowPassword] = useState(false);
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
-  const [successMessage, setSuccessMessage] = useState("");
-
-  useEffect(() => {
-    if (searchParams.get("registered") === "true") {
-      setSuccessMessage("Account created! Please sign in with your email and password.");
-    }
-  }, [searchParams]);
 
   async function handleSubmit(e) {
     e.preventDefault();
     setError("");
-    setSuccessMessage("");
 
     if (!email.trim()) {
       setError("Enter your email to continue.");
       return;
     }
+
     if (!password) {
       setError("Enter your password.");
       return;
@@ -39,12 +38,27 @@ function LoginForm() {
 
     setLoading(true);
 
+<<<<<<< HEAD
+=======
+    // Demo Mode
+>>>>>>> 739d91392505da1464319e73b1bdc5aba28db2cd
     if (DEMO_MODE) {
-      localStorage.setItem("yaadnama_demo_user", JSON.stringify({ email, loginTime: new Date().toISOString() }));
+      localStorage.setItem(
+        "yaadnama_demo_user",
+        JSON.stringify({
+          email,
+          loginTime: new Date().toISOString(),
+        })
+      );
+
       router.push("/dashboard");
       return;
     }
 
+<<<<<<< HEAD
+=======
+    // Production Mode
+>>>>>>> 739d91392505da1464319e73b1bdc5aba28db2cd
     const { error: authError } = await signIn(email, password);
 
     if (authError) {
@@ -57,6 +71,7 @@ function LoginForm() {
   }
 
   return (
+<<<<<<< HEAD
     <main className="page-fade flex min-h-screen items-center justify-center bg-background px-6 py-12 text-ink">
       <div className="relative mx-auto grid max-w-6xl gap-8 overflow-hidden rounded-[2.5rem] border border-surface-2 bg-surface/90 p-6 shadow-glow backdrop-blur-xl sm:grid-cols-[1.1fr_0.9fr]">
         <section className="space-y-7 px-4 py-8 sm:px-8">
@@ -147,9 +162,93 @@ function LoginForm() {
                 </button>
               </div>
             </div>
+=======
+    <main className="flex min-h-screen flex-col items-center justify-center bg-paper px-6 py-16 text-ink">
+      <div className="w-full max-w-md">
+        <Link
+          href="/"
+          className="mb-6 inline-flex items-center text-sm text-teal-dark hover:underline"
+        >
+          ← Back
+        </Link>
+
+        <div className="keepsake-card mx-auto mb-6 flex h-20 w-20 items-center justify-center rounded-keepsake shadow-keepsake">
+          <span className="font-display text-3xl text-teal-dark">Y</span>
+        </div>
+
+        <h1 className="text-center font-display text-3xl font-semibold">
+          Sign In
+        </h1>
+
+        <p className="mt-2 text-center text-inkfaint">
+          Access your memory vault
+        </p>
+
+        <form
+          onSubmit={handleSubmit}
+          className="keepsake-card mt-8 space-y-4 rounded-keepsake p-6 shadow-keepsake"
+        >
+          <div>
+            <label
+              htmlFor="email"
+              className="mb-2 block text-sm font-medium text-ink"
+            >
+              Email Address
+            </label>
+
+            <input
+              id="email"
+              type="email"
+              placeholder="your@email.com"
+              value={email}
+              onChange={(e) => {
+                setEmail(e.target.value);
+                setError("");
+              }}
+              className="w-full rounded-lg border-2 border-paper2 bg-white px-4 py-2 text-ink outline-none transition-colors focus:border-teal-dark dark:border-white/20 dark:bg-white/10 dark:text-white/90"
+            />
+          </div>
+
+          <div>
+            <label
+              htmlFor="password"
+              className="mb-2 block text-sm font-medium text-ink"
+            >
+              Password
+            </label>
+
+            <input
+              id="password"
+              type="password"
+              placeholder="••••••••"
+              value={password}
+              onChange={(e) => {
+                setPassword(e.target.value);
+                setError("");
+              }}
+              className="w-full rounded-lg border-2 border-paper2 bg-white px-4 py-2 text-ink outline-none transition-colors focus:border-teal-dark dark:border-white/20 dark:bg-white/10 dark:text-white/90"
+            />
+          </div>
+
+          {error && (
+            <p className="text-sm text-red-600">
+              {error}
+            </p>
+          )}
+
+          <button
+            type="submit"
+            disabled={loading}
+            className="w-full rounded-lg bg-teal-dark px-4 py-2 font-semibold text-white transition-transform hover:-translate-y-0.5 disabled:cursor-not-allowed disabled:opacity-50"
+          >
+            {loading ? "Signing in..." : "Sign In"}
+          </button>
+        </form>
+>>>>>>> 739d91392505da1464319e73b1bdc5aba28db2cd
 
             {error && <p className="text-sm text-rose-dark">{error}</p>}
 
+<<<<<<< HEAD
             <button type="submit" disabled={loading} className="btn-primary w-full justify-center">
               {loading ? "Signing in…" : "Sign in"}
             </button>
@@ -159,6 +258,17 @@ function LoginForm() {
             Need an account? <Link href="/register" className="text-teal-dark font-semibold hover:text-teal-dark/80">Create one</Link>
           </div>
         </section>
+=======
+        <p className="mt-6 text-center text-sm text-inkfaint">
+          Don't have an account?{" "}
+          <Link
+            href="/register"
+            className="font-semibold text-teal-dark hover:underline"
+          >
+            Create one
+          </Link>
+        </p>
+>>>>>>> 739d91392505da1464319e73b1bdc5aba28db2cd
       </div>
     </main>
   );
