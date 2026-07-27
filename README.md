@@ -662,16 +662,15 @@ Every aspect of the application—from the user experience and authentication fl
 
 <div align="center">
 
-### 🌟 Thank you for taking the time to explore YaadNama AI.
+## 🌟 Thank You for Exploring YaadNama AI
 
-If you have any questions, suggestions, or feedback, feel free to **open an issue** on this GitHub repository.
+Thank you for taking the time to explore **YaadNama AI**. I hope you enjoyed learning about the project.
 
-**Built with ❤️, empathy, and AI. by Rifat Hussain**
+If you have any questions, suggestions, or feedback, feel free to **open an issue** or **start a discussion** in this GitHub repository.
 
-<<<<<<< HEAD
+**Built with ❤️, empathy, and AI by Rifat Hussain**
+
+⭐ *If you found this project helpful or inspiring, consider giving it a star!*
+
 </div>
-=======
-</div>
 
-</div>
->>>>>>> 739d91392505da1464319e73b1bdc5aba28db2cd
