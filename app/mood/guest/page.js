@@ -25,12 +25,12 @@ export default function GuestMoodPage() {
   const maxCount = Math.max(1, ...counts.map((c) => c.count));
 
   return (
-    <div className="min-h-screen bg-paper text-ink dark:bg-[#1c2321] dark:text-[#f1ece0]">
+    <div className="page-fade min-h-screen bg-background text-ink dark:text-[#f1ece0]">
       {/* Header */}
-      <div className="border-b border-paper2 bg-paper2/30 dark:border-white/10">
+      <div className="border-b border-surface-2 bg-surface/80 backdrop-blur-xl dark:border-white/10">
         <div className="mx-auto max-w-2xl px-6 py-4 flex items-center justify-between">
           <h1 className="font-display text-2xl font-semibold">Guest Mood Tracker</h1>
-          <Link href="/" className="text-sm text-teal-dark hover:underline">
+          <Link href="/" className="min-h-11 rounded-full px-3 py-2 text-sm font-semibold text-teal-dark hover:bg-teal/10">
             Back to Home
           </Link>
         </div>
@@ -68,7 +68,7 @@ export default function GuestMoodPage() {
 
         {/* Note Section */}
         <div className="keepsake-card rounded-keepsake p-6 shadow-keepsake">
-          <label htmlFor="note" className="block text-sm font-medium text-ink mb-2">
+          <label htmlFor="note" className="field-label">
             Add a note (optional)
           </label>
           <textarea
@@ -76,7 +76,7 @@ export default function GuestMoodPage() {
             placeholder="What's on your mind?"
             value={note}
             onChange={(e) => setNote(e.target.value)}
-            className="w-full h-24 rounded-lg border-2 border-paper2 bg-white px-3 py-2 text-ink outline-none transition-colors focus:border-teal-dark resize-none dark:border-white/20 dark:bg-white/10 dark:text-white/90"
+            className="input-field h-28 resize-y text-base"
           />
         </div>
 
@@ -91,7 +91,7 @@ export default function GuestMoodPage() {
                   <span className="w-20 text-sm font-medium">{m.label}</span>
                   <div className="flex-1 h-6 bg-paper2 rounded-full overflow-hidden">
                     <div
-                      className="h-full bg-teal-dark transition-all"
+                      className="h-full rounded-full bg-teal transition-[width]"
                       style={{ width: `${(m.count / maxCount) * 100}%` }}
                     ></div>
                   </div>
@@ -133,7 +133,7 @@ export default function GuestMoodPage() {
           </p>
           <Link
             href="/register"
-            className="inline-block rounded-lg bg-teal-dark px-6 py-2 font-semibold text-paper transition-transform hover:-translate-y-0.5"
+            className="btn-primary min-h-12"
           >
             Create Account
           </Link>

@@ -12,7 +12,6 @@ export default function RequireProfile({ children }) {
 
   useEffect(() => {
     async function checkAuth() {
-      // Check for demo mode
       if (DEMO_MODE) {
         const demoUser = localStorage.getItem("yaadnama_demo_user");
         if (demoUser) {
@@ -22,8 +21,7 @@ export default function RequireProfile({ children }) {
         }
       }
 
-      // Production mode: use Supabase
-      const { session, error } = await getSession();
+      const { session } = await getSession();
       if (!session?.user) {
         router.replace("/login");
       } else {
@@ -35,8 +33,11 @@ export default function RequireProfile({ children }) {
 
   if (user === undefined) {
     return (
-      <div className="flex min-h-screen items-center justify-center text-ink/60">
-        Loading your memories…
+      <div className="flex min-h-screen items-center justify-center px-5 text-center text-ink/70 dark:text-white/70">
+        <div className="glass-card inline-flex max-w-md flex-col items-center gap-3 rounded-[2rem] border border-surface-2 px-10 py-12 text-lg font-medium shadow-glow">
+          <div className="h-12 w-12 rounded-3xl bg-teal/15 text-teal-dark flex items-center justify-center text-2xl">⌛</div>
+          <p>Preparing your memory space...</p>
+        </div>
       </div>
     );
   }
@@ -44,7 +45,7 @@ export default function RequireProfile({ children }) {
   return (
     <>
       <Nav userEmail={user?.email} />
-      <main className="mx-auto max-w-5xl px-5 py-8">{children}</main>
+      <main className="mx-auto max-w-6xl px-5 py-8 pb-28 md:px-8 lg:ml-72 lg:max-w-[calc(100%-18rem)] lg:px-10 lg:py-10 lg:pb-10">{children}</main>
     </>
   );
 }
