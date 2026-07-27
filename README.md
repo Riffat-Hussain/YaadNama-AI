@@ -124,9 +124,22 @@ Explore the key screens of the application, from authentication to AI-powered me
 <tr>
 <td align="center" width="33%">
 
+<<<<<<< HEAD
+<img src="./screenshots/landing.png" width="280" alt="Landing / Sign In"/>
+
+**🏠 Landing **
+
+</td>
+<td align="center" width="33%">
+
+<img src="./screenshots/login.png" width="280" alt="Landing / Sign In"/>
+
+**🏠 Sign In**
+=======
 <img src="./screenshots/login.png" width="280" alt="Landing / Sign In"/>
 
 **🏠 Landing / Sign In**
+>>>>>>> 739d91392505da1464319e73b1bdc5aba28db2cd
 
 </td>
 
@@ -150,7 +163,11 @@ Explore the key screens of the application, from authentication to AI-powered me
 <tr>
 <td align="center">
 
+<<<<<<< HEAD
+<img src="./screenshots/campanion.png" width="280" alt="AI Memory Companion"/>
+=======
 <img src="./screenshots/companion.png" width="280" alt="AI Memory Companion"/>
+>>>>>>> 739d91392505da1464319e73b1bdc5aba28db2cd
 
 **🤖 AI Memory Companion**
 
@@ -648,6 +665,10 @@ If you have any questions, suggestions, or feedback, feel free to **open an issu
 
 **Built with ❤️, empathy, and AI. by Rifat Hussain**
 
+<<<<<<< HEAD
+</div>
+=======
 </div>
 
 </div>
+>>>>>>> 739d91392505da1464319e73b1bdc5aba28db2cd

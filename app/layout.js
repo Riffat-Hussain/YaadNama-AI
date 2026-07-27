@@ -10,7 +10,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className="antialiased bg-paper text-ink dark:bg-[#1c2321] dark:text-[#f1ece0]">
+      <body className="antialiased text-ink selection:bg-teal/20 dark:text-[#f1ece0]">
         <SettingsProvider>{children}</SettingsProvider>
       </body>
     </html>
